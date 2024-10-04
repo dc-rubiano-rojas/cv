@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 8fr 4fr; /* Dos columnas con proporciones 8 y 4 */
+  height: auto;
+}
+
+.column {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Espacio entre secciones */
+  margin-left: 7px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.my-name {
+  font-size: 20px
+}
+.carrera{
+  font-size: 17px
+}
+.perfil-profesional{
+  font-size: 12px
+}
+.work-experience {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+
+.company {
+  background-color: white;
+  padding: 5px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 10px
+}
+
+.work-title {
+  font-weight: bold;
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+.how-long {
+  font-style: italic;
+  font-size: 1em;
+}
+
+.work-subtitle {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.how-long{
+  font-size: 12px;
+
+}
+
+.work-description {
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.work-functions ul {
+  font-size: 12px;
+
+  margin-left: 20px;
+}
+
+.work-functions ul li {
+  margin-bottom: 5px;
+}
+
+.right {
+  background-color: #172d00;
+
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 30px 20px;
+  border-radius: 0px; /* Bordes redondeados */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Sombras */
+  height: 100%; /* Ocupar toda la altura */
+  //overflow-y: auto; /* Permitir desplazamiento si el contenido es muy largo */
+}
+
+.profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 3px solid white;
+}
+
+.contact-info, .skills-section, .education-section, .courses-section {
+  background-color: rgba(255, 255, 255, 0.1); /* Fondo translúcido */
+  
+  width: 100%;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 35px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra para cada sección */
+}
+
+.contact-info ul, .skills-section ul, .education-section ul, .courses-section ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.contact-info ul li, .skills-section ul li, .education-section ul li, .courses-section ul li {
+  margin-bottom: 10px;
+  font-size: 0.95em;
+}
+
+.contact-info a {
+  color: white;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+.skills-section h2, .contact-info h2, .education-section h2, .courses-section h2 {
+  margin-bottom: 10px;
+  font-size: 1.2em;
+  color: #f2f2f2;
+}
+
+.education-section p, .courses-section p {
+  margin-bottom: 10px;
+  font-size: 0.95em;
+  color: #ccc;
+}
+
+.manager {
+  margin-bottom: 1px
+}
+
+.courses-section {
+  margin-top: 70px
+}
+
+.avvillas {
+  margin-top: 50px
+}
