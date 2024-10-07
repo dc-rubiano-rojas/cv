@@ -39,9 +39,12 @@ body {
 }
 .carrera{
   font-size: 17px
+  margin-top: 5px
+
 }
 .perfil-profesional{
-  font-size: 12px
+  font-size: 12px;
+  margin-top: 10px
 }
 .work-experience {
   display: flex;
@@ -70,6 +73,8 @@ body {
 .work-subtitle {
   font-size: 14px;
   margin-bottom: 10px;
+  margin-top: 10px;
+
 }
 
 .how-long{
@@ -82,10 +87,16 @@ body {
   margin-bottom: 10px;
 }
 
+.work-description:last-child {
+margin-top: 10px;
+margin-bottom: 10px;
+}
+
 .work-functions ul {
   font-size: 12px;
 
   margin-left: 20px;
+  margin-bottom: 10px;
 }
 
 .work-functions ul li {
@@ -158,6 +169,8 @@ body {
 }
 
 .manager {
+  margin-top: 40px !important;
+
   margin-bottom: 1px
 }
 
@@ -166,5 +179,10 @@ body {
 }
 
 .avvillas {
-  margin-top: 50px
+  margin-top: 100px
+}
+
+.walmart {
+  margin-top: 30px
+
 }
