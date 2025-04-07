@@ -75,49 +75,51 @@
                 <li>
                   Contribuí al desarrollo de múltiples stacks en AWS,
                   incluyendo:
-                </li>
-                <li>
-                  API Stack: Definición de API Gateway y funciones Lambda para
-                  manejar solicitudes.
-                </li>
-                <li>
-                  Cognito Stack: Gestión de autenticación y autorización
-                  mediante Amazon Cognito.
-                </li>
-                <li>
-                  DynamoDB Stack: Diseño de bases de datos escalables para un
-                  manejo eficiente de la información.
-                </li>
-                <li>
-                  EKS Stack: Apoyo en la orquestación y despliegue de
-                  microservicios con Kubernetes en AWS (EKS).
-                </li>
-                <li>
-                  Lambda Stack: Creación y optimización de funciones serverless
-                  para diversos procesos backend.
-                </li>
-                <li>
-                  RDS Stack: Configuración y soporte de una base de datos
-                  relacional (RDS) para almacenar datos estructurados.
-                </li>
-                <li>
-                  SES Stack: Integración de Amazon SES para notificaciones y
-                  comunicaciones por correo electrónico.
-                </li>
-                <li>
-                  WAF Stack: Implementación de AWS Web Application Firewall
-                  (WAF) para mejorar la seguridad.
+                  <ul>
+                    <li>
+                      API Stack: Definición de API Gateway y funciones Lambda
+                      para manejar solicitudes.
+                    </li>
+                    <li>
+                      Cognito Stack: Gestión de autenticación y autorización
+                      mediante Amazon Cognito.
+                    </li>
+                    <li>
+                      DynamoDB Stack: Diseño de bases de datos escalables para
+                      un manejo eficiente de la información.
+                    </li>
+                    <li>
+                      EKS Stack: Apoyo en la orquestación y despliegue de
+                      microservicios con Kubernetes en AWS (EKS).
+                    </li>
+                    <li>
+                      Lambda Stack: Creación y optimización de funciones
+                      serverless para diversos procesos backend.
+                    </li>
+                    <li>
+                      RDS Stack: Configuración y soporte de una base de datos
+                      relacional (RDS) para almacenar datos estructurados.
+                    </li>
+                    <li>
+                      SES Stack: Integración de Amazon SES para notificaciones y
+                      comunicaciones por correo electrónico.
+                    </li>
+                    <li>
+                      WAF Stack: Implementación de AWS Web Application Firewall
+                      (WAF) para mejorar la seguridad.
+                    </li>
+                  </ul>
                 </li>
               </ul>
             </div>
           </div>
 
           <!-- Experiencia VASS -->
-          <div class="company">
+          <div class="company vass">
             <div class="work-title">VASS COMPANY</div>
             <div class="work-subtitle">
               Desarrollador Backend
-              <p class="how-long">Abril 2023 - Actual</p>
+              <p class="how-long">Abril 2023 - Octubre 2024</p>
             </div>
             <div class="work-description">
               Participé en la planificación, diseño e implementación de una
@@ -131,7 +133,7 @@
               rendimiento y reduciendo tiempos de despliegue mediante la
               implementación de prácticas de DevOps
             </div>
-            <div class="work-functions">
+            <div class="work-functions wf-vass">
               <ul>
                 <li>
                   Colaboré con equipos multifuncionales para asegurar una
@@ -432,7 +434,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 
-    <script>
+    <!--     <script>
       document
         .getElementById("downloadPDF")
         .addEventListener("click", function () {
@@ -444,6 +446,53 @@
 
           // Set options for html2pdf
           const options = {
+            margin: 0,
+            filename: "Daniel_Rubiano_cv.pdf",
+            image: { type: "jpeg", quality: 0.2 },
+            html2canvas: { scale: 4, useCORS: true, allowTaint: true }, // allowTaint:false to prevent tainted canvas issues
+            jsPDF: { unit: "in", format: "letter", orientation: "portrait" },
+          };
+
+          // Generate PDF
+          html2pdf()
+            .from(container)
+            .set(options)
+            .save()
+            .then(() => console.log("PDF generated successfully!"))
+            .catch((error) => console.error("Error generating PDF:", error));
+        });
+    </script> -->
+
+    <script>
+      document
+        .getElementById("downloadPDF")
+        .addEventListener("click", function () {
+          const container = document.querySelector(".container");
+          if (!container) {
+            console.error("Container not found");
+            return;
+          }
+
+          // CSS to ensure proper page breaks
+          const styles = `
+          .container { width: 100%; }
+          .page-break { page-break-before: always; }
+        `;
+          const styleSheet = document.createElement("style");
+          styleSheet.type = "text/css";
+          styleSheet.innerText = styles;
+          document.head.appendChild(styleSheet);
+
+          // Set options for html2pdf
+          const options = {
+            margin: [0, 0, 0, 0], // Adjust margins (top, left, bottom, right)
+            filename: "Daniel_Rubiano_cv.pdf",
+            image: { type: "jpeg", quality: 0.8 },
+            html2canvas: { scale: 2, useCORS: true, allowTaint: false },
+            jsPDF: { unit: "in", format: "letter", orientation: "portrait" },
+            pagebreak: { mode: ["avoid-all", "css"], before: ".page-break" },
+          };
+          const optionsantes = {
             margin: 0,
             filename: "Daniel_Rubiano_cv.pdf",
             image: { type: "jpeg", quality: 0.2 },

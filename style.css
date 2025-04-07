@@ -12,6 +12,7 @@ body {
   display: grid;
   grid-template-columns: 8fr 4fr; /* Dos columnas con proporciones 8 y 4 */
   height: auto;
+  padding-top: 5px
 }
 
 .column {
@@ -168,3 +169,12 @@ body {
 .avvillas {
   margin-top: 36px
 }
+/* .vass {
+  margin-top: 30px
+
+}
+
+.wf-vass {
+  margin-top: 50px
+
+} */
