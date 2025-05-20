@@ -95,7 +95,8 @@ body {
 
 .right {
   background-color: #172d00;
-
+  margin-top: -20px;
+  margin-bottom: -250px;
   color: white;
   display: flex;
   flex-direction: column;
